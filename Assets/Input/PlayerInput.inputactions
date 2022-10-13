@@ -12,6 +12,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "DoDamge(Temp)",
+                    "type": "Button",
+                    "id": "da4d8880-c2ab-4a87-87b5-50255d67f056",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -135,6 +143,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "1b333a93-1a19-4318-82f6-f3f8d4b4445e",
+                    "path": "<Keyboard>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoDamge(Temp)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

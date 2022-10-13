@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,17 @@ public class InputParcer : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private PlayerMovement playerMovement;
 
+    [SerializeField] private HealthData healthData;
+
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
         _playerControlsActions = _playerInput.actions;
-        Debug.Log(_playerControlsActions);
+    }
+
+    private void Start()
+    {
+        _playerControlsActions["DoDamge(Temp)"].performed += DoDamage;
     }
 
     private void FixedUpdate()
@@ -25,4 +32,6 @@ public class InputParcer : MonoBehaviour
         var moveInput = _playerControlsActions["Move"].ReadValue<Vector2>();
         playerMovement.MovePlayer(moveInput);
     }
+    
+    private void DoDamage(InputAction.CallbackContext context) => healthData.TakeDamage(5);
 }
