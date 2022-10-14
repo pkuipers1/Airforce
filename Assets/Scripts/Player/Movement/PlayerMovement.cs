@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,14 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Booleans")]
     [SerializeField] private bool isMoving;
+    private bool hasStartedMoving;
+    private bool hasStartedTuring = false;
+    
+    [Header("Unity Event's")]
+    [SerializeField] private UnityEvent onStartMoving = new UnityEvent();
+    [SerializeField] private UnityEvent onTuring = new UnityEvent();
+    [SerializeField] private UnityEvent onStopMoving = new UnityEvent();
+    [SerializeField] private UnityEvent onStopTurning = new UnityEvent();
     
     private void Awake()
     {
@@ -27,7 +36,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovePlayer(Vector2 moveInput)
     {
+        if (hasStartedMoving && rb.velocity == Vector2.zero)
+        {
+            hasStartedMoving = false;
+            onStopMoving?.Invoke();
+        }
+        
         rb.velocity = new Vector2(moveInput.x * movementSpeed.x, moveInput.y * movementSpeed.y);
+        if (!hasStartedMoving && rb.velocity != Vector2.zero)
+        {
+            hasStartedMoving = true;
+            onStartMoving?.Invoke();
+        }
+        
         RotatingPlayer(moveInput);
     }
     
@@ -43,9 +64,19 @@ public class PlayerMovement : MonoBehaviour
         else if(rotationThresholdZ && moveInput.x < 0) currentRotation.z -= rotationSpeed.y;
         
         if (!isMoving) currentRotation *= rotationReturner;
+        if (!hasStartedTuring && moveInput != Vector2.zero)
+        {
+            hasStartedTuring = true;
+            onTuring?.Invoke();
+        }
 
-        var applyAbleRotation = new Vector3(currentRotation.x, currentRotation.z, 0);
-
-        visual.transform.localEulerAngles = applyAbleRotation;
+        var applyableRotation = new Vector3(currentRotation.x, currentRotation.z, 0);
+        visual.transform.localEulerAngles = applyableRotation;
+        
+        if (hasStartedTuring && moveInput == Vector2.zero)
+        {
+            hasStartedTuring = false;
+            onStopTurning?.Invoke();
+        }
     }
 }
