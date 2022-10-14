@@ -70,8 +70,8 @@ public class PlayerMovement : MonoBehaviour
             onTuring?.Invoke();
         }
 
-        var applyAbleRotation = new Vector3(currentRotation.x, currentRotation.z, 0);
-        visual.transform.localEulerAngles = applyAbleRotation;
+        var applyableRotation = new Vector3(currentRotation.x, currentRotation.z, 0);
+        visual.transform.localEulerAngles = applyableRotation;
         
         if (hasStartedTuring && moveInput == Vector2.zero)
         {
