@@ -26,7 +26,7 @@
                 {
                     "name": "",
                     "id": "1b1207cb-7548-4e3e-a395-3da0ae98f5b6",
-                    "path": "<Joystick>/stick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
