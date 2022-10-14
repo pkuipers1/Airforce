@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2090330557}
-  playerShooting: {fileID: 0}
+  playerShooting: {fileID: 2090330556}
   healthData: {fileID: 2090330562}
 --- !u!114 &2090330562
 MonoBehaviour:
