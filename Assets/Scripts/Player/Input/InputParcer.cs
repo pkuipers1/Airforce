@@ -13,7 +13,6 @@ public class InputParcer : MonoBehaviour
     
     [Header("Scripts")]
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private PlayerShooting playerShooting;
 
     [SerializeField] private HealthData healthData;
 
@@ -32,9 +31,6 @@ public class InputParcer : MonoBehaviour
     {
         var moveInput = _playerControlsActions["Move"].ReadValue<Vector2>();
         playerMovement.MovePlayer(moveInput);
-        
-        var shootInput = _playerControlsActions["Shooting"].ReadValue<float>();
-        playerShooting.Shoot(shootInput);
     }
     
     private void DoDamage(InputAction.CallbackContext context) => healthData.TakeDamage(5);
