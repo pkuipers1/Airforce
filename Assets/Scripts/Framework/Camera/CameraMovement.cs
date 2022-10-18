@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Awake()
     {
-        _player = GameObject.Find("TestObject");
+        _player = GameObject.Find("TestObject");// TODO: dit moet veranderd worden naar de goed speler of speler tag
     }
 
     private void FixedUpdate()
