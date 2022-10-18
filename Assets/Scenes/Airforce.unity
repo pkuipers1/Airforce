@@ -802,6 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca57953d9e80cc447a9895dd8eb87391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2090330555}
   speedDivider: 50
 --- !u!20 &519420031
 Camera:
