@@ -97,10 +97,10 @@ GameObject:
   - component: {fileID: 324872762614426445}
   - component: {fileID: 324872762614426417}
   - component: {fileID: 324872762614426446}
-  - component: {fileID: 324872762614426416}
   - component: {fileID: 179895259}
   - component: {fileID: 179895260}
   - component: {fileID: 8522428438876290091}
+  - component: {fileID: 8209162737800507583}
   m_Layer: 0
   m_Name: Spitfire
   m_TagString: Untagged
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 324872762614426417}
-  playerShooting: {fileID: 324872762614426416}
+  playerShooting: {fileID: 8209162737800507583}
   healthData: {fileID: 324872762614426446}
 --- !u!114 &324872762614426417
 MonoBehaviour:
@@ -261,6 +261,18 @@ MonoBehaviour:
   rotationReturner: 0.88
   rotationThreshold: 60
   isMoving: 0
+  onStartMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onTuring:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopTurning:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &324872762614426446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,24 +302,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDead: 0
---- !u!114 &324872762614426416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324872762614426423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f7efed49828e8549bc7c8ac840ad1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootCooldown: 0
-  reloadSpeed: 0.5
-  bulletSpawnpoints:
-  - {fileID: 4497445351920773413}
-  - {fileID: 633212630880605145}
-  bullet: {fileID: 847951327749226659, guid: 2986822b9c6307348acc0899898a2ec2, type: 3}
 --- !u!114 &179895259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +354,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1.1}
   m_EdgeRadius: 0
+--- !u!114 &8209162737800507583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324872762614426423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391f03966c6ffc941ae15525746fad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootCooldown: 1
+  reloadSpeed: 0.3
+  bulletSpawnpoints: []
+  bullet: {fileID: 847951327749226659, guid: 2986822b9c6307348acc0899898a2ec2, type: 3}
 --- !u!1 &633212630880605145
 GameObject:
   m_ObjectHideFlags: 0
