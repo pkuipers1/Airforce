@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6447036092131435658}
+  - component: {fileID: -3652282062478060476}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -31,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3652282062478060476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847951327749226659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84789151bc66a44781d4e0d13b4f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletLifespan: 5
+  bulletSpeed: 0.3
 --- !u!1 &5967103942750203593
 GameObject:
   m_ObjectHideFlags: 0
