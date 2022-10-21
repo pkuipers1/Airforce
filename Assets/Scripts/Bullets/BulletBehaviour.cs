@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BulletBehaviour : MonoBehaviour
 {
+    [Header("Bullet Stats")]
     [SerializeField] private float bulletLifespan;
     [SerializeField] private float bulletSpeed;
     private float bulletAge;
-        
-    // Start is called before the first frame update
+
+    [Header("Unity Events")] 
+    [SerializeField] private UnityEvent onShoot = new UnityEvent();
+    [SerializeField] private UnityEvent onHit = new UnityEvent();
+    [SerializeField] private UnityEvent onDeath = new UnityEvent();
+    
     void Start()
     {
         bulletAge = 0;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         bulletAge += Time.deltaTime;
