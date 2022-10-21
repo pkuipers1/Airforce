@@ -12,7 +12,7 @@ public class BulletBehaviour : MonoBehaviour
 
     [Header("Unity Events")] 
     [SerializeField] private UnityEvent onShoot = new UnityEvent();
-    [SerializeField] private UnityEvent onHit = new UnityEvent();
+    [SerializeField] public UnityEvent onHitTarget = new UnityEvent();
     [SerializeField] private UnityEvent onDeath = new UnityEvent();
     
     void Start()

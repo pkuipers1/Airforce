@@ -52,7 +52,7 @@ MonoBehaviour:
   onShoot:
     m_PersistentCalls:
       m_Calls: []
-  onHit:
+  onHitTarget:
     m_PersistentCalls:
       m_Calls: []
   onDeath:
