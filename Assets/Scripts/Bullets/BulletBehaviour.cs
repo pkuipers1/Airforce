@@ -20,7 +20,7 @@ public class BulletBehaviour : MonoBehaviour
         bulletAge = 0;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         BulletDeathOverTime();
         Move();
