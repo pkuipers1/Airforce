@@ -10,6 +10,11 @@ public class CameraMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        MoveCamera();
+    }
+
+    private void MoveCamera()
+    {
         var playerPos = player.transform.position;
         var wantedPosition = new Vector3(playerPos.x / speedDivider, playerPos.y / speedDivider, -10);
         transform.position = wantedPosition;
