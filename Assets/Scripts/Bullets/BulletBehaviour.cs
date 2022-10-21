@@ -22,12 +22,22 @@ public class BulletBehaviour : MonoBehaviour
     
     void Update()
     {
+        BulletDeathOverTime();
+        Move();
+    }
+
+    private void BulletDeathOverTime()
+    {
         bulletAge += Time.deltaTime;
+        
         if (bulletAge > bulletLifespan)
         {
             Destroy(gameObject);
         }
-        
+    }
+
+    private void Move()
+    {
         transform.position += Vector3.up * bulletSpeed;
     }
 }
