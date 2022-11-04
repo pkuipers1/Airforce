@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -8,6 +9,7 @@ public class EnvironmentSpawner : MonoBehaviour
 {
     [Header("Spawnable Items:")]
     public GameObject[] environmentParts;
+    public bool areTrees;
     
     [Header("Spawn Constraints:")]
     public float spawnAreaXMin;
@@ -57,10 +59,11 @@ public class EnvironmentSpawner : MonoBehaviour
                 scale = randomScaleFactor;
             }
             
+            
             var objectMade = Instantiate(environmentParts[randomSpawnNR], new Vector2(randomSpawnPos, spawnAreaY), Quaternion.Euler(new Vector3(0, 0, rotation)));
 
             objectMade.transform.localScale = new Vector3(scale, scale, scale);
-                
+            
             currentSpawnCooldown = spawnCooldown;
         }
     }

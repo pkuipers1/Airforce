@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet Spawn
+  - Tree
+  - Bush
+  - Water
+  - Rock
+  - Squiggle
   layers:
   - Default
   - TransparentFX
