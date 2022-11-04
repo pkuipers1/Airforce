@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnvironmentBehaviour : MonoBehaviour
 {
     [Header("Stats")]
-    public float moveSpeed;
-    public float lifeSpan;
+    [SerializeField] float moveSpeed;
+    [SerializeField] float lifeSpan;
 
     [Header("Despawn when Touching:")] 
-    public bool tree;
-    public bool bush;
-    public bool rock;
-    public bool squiggle;
-    public bool water;
+    [SerializeField] bool tree;
+    [SerializeField] bool bush;
+    [SerializeField] bool rock;
+    [SerializeField] bool squiggle;
+    [SerializeField] bool water;
     
     private float age;
     
@@ -50,19 +50,31 @@ public class EnvironmentBehaviour : MonoBehaviour
         }
         if (CompareTag("Bush") && col.CompareTag("Bush") && bush)
         {
-            Destroy(gameObject);
+            if (age <= EnvironmentSpawner.spawnCooldown + 0.05)
+            {
+                Destroy(gameObject);
+            }        
         }
         if (CompareTag("Rock") && col.CompareTag("Rock") && rock)
         {
-            Destroy(gameObject);
+            if (age <= EnvironmentSpawner.spawnCooldown + 0.05)
+            {
+                Destroy(gameObject);
+            }        
         }
         if (CompareTag("Squiggle") && col.CompareTag("Squiggle") && squiggle)
         {
-            Destroy(gameObject);
+            if (age <= EnvironmentSpawner.spawnCooldown + 0.05)
+            {
+                Destroy(gameObject);
+            }        
         }
         if (CompareTag("Water") && col.CompareTag("Water") && water)
         {
-            Destroy(gameObject);
+            if (age <= EnvironmentSpawner.spawnCooldown + 0.05)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -7,63 +7,62 @@ using Random = UnityEngine.Random;
 
 public class EnvironmentSpawner : MonoBehaviour
 {
-    [Header("Spawnable Items:")]
-    public GameObject[] environmentParts;
+    [Header("Spawnable Items")]
+    [SerializeField] GameObject[] environmentParts;
     
-    [Header("Spawn Constraints:")]
-    public float spawnAreaXMin;
-    public float spawnAreaXMax;
-    public float spawnAreaY;
+    [Header("Spawn Constraints")]
+    [SerializeField] float spawnAreaXMin;
+    [SerializeField] float spawnAreaXMax;
+    [SerializeField] float spawnAreaY;
     public static float spawnCooldown;
     private float currentSpawnCooldown;
     
-    [Header("Random Rotation:")]
-    public bool randomRotation;
-    public float randomRotationMin;
-    public float randomRotationMax;
+    [Header("Random Rotation")]
+    [SerializeField] bool randomRotation;
+    [SerializeField] float randomRotationMin;
+    [SerializeField] float randomRotationMax;
     
-    [Header("Random Scale:")]
-    public bool randomScale;
-    public float randomScaleMin;
-    public float randomScaleMax;
+    [Header("Random Scale")]
+    [SerializeField] bool randomScale;
+    [SerializeField] float randomScaleMin;
+    [SerializeField] float randomScaleMax;
     
     // Update is called once per frame
     void Update()
     {
-        Spawn();
-    }
+        currentSpawnCooldown -= Time.deltaTime;
+        if (currentSpawnCooldown <= 0)
+        {
+            Spawn();
+        }    
+    }    
 
     void Spawn()
     {
-        currentSpawnCooldown -= Time.deltaTime;
-
-        if (currentSpawnCooldown <= 0)
+        var rotation = 0f;
+        var scale = 1f;
+        
+        float randomSpawnPos = Random.Range(spawnAreaXMin, spawnAreaXMax);
+        float randomRot = Random.Range(randomRotationMin, randomRotationMax);
+        float randomScaleFactor = Random.Range(randomScaleMin, randomScaleMax);
+        
+        int randomSpawnNR = Random.Range(0, environmentParts.Length);
+        
+        if (randomRotation)
         {
-            var rotation = 0f;
-            var scale = 1f;
-            
-            float randomSpawnPos = Random.Range(spawnAreaXMin, spawnAreaXMax);
-            float randomRot = Random.Range(randomRotationMin, randomRotationMax);
-            float randomScaleFactor = Random.Range(randomScaleMin, randomScaleMax);
-            
-            int randomSpawnNR = Random.Range(0, environmentParts.Length);
-            
-            if (randomRotation)
-            {
-                rotation = randomRot;
-            }
-
-            if (randomScale)
-            {
-                scale = randomScaleFactor;
-            }
-            
-            
-            var objectMade = Instantiate(environmentParts[randomSpawnNR], new Vector2(randomSpawnPos, spawnAreaY), Quaternion.Euler(new Vector3(0, 0, rotation)));
-
-            objectMade.transform.localScale = new Vector3(scale, scale, scale);
-            
-            currentSpawnCooldown = spawnCooldown;
+            rotation = randomRot;
         }
+
+        if (randomScale)
+        {
+            scale = randomScaleFactor;
+        }
+        
+        
+        var objectMade = Instantiate(environmentParts[randomSpawnNR], new Vector2(randomSpawnPos, spawnAreaY), Quaternion.Euler(new Vector3(0, 0, rotation)));
+
+        objectMade.transform.localScale = new Vector3(scale, scale, scale);
+        
+        currentSpawnCooldown = spawnCooldown;
     }
 }
