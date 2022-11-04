@@ -9,13 +9,12 @@ public class EnvironmentSpawner : MonoBehaviour
 {
     [Header("Spawnable Items:")]
     public GameObject[] environmentParts;
-    public bool areTrees;
     
     [Header("Spawn Constraints:")]
     public float spawnAreaXMin;
     public float spawnAreaXMax;
     public float spawnAreaY;
-    public float spawnCooldown;
+    public static float spawnCooldown;
     private float currentSpawnCooldown;
     
     [Header("Random Rotation:")]
@@ -47,7 +46,7 @@ public class EnvironmentSpawner : MonoBehaviour
             float randomRot = Random.Range(randomRotationMin, randomRotationMax);
             float randomScaleFactor = Random.Range(randomScaleMin, randomScaleMax);
             
-            int randomSpawnNR = Random.Range(0, environmentParts.Length-1);
+            int randomSpawnNR = Random.Range(0, environmentParts.Length);
             
             if (randomRotation)
             {

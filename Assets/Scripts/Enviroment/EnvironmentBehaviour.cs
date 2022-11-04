@@ -43,7 +43,7 @@ public class EnvironmentBehaviour : MonoBehaviour
     {
         if (CompareTag("Tree") && col.CompareTag("Tree") && tree)
         {
-            if (age <= 0.5f)
+            if (age <= EnvironmentSpawner.spawnCooldown + 0.05)
             {
                 Destroy(gameObject);
             }

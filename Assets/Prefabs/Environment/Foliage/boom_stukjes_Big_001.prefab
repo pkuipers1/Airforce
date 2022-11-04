@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1475318342673259369}
   m_Layer: 0
   m_Name: boom_stukjes_Big_001
-  m_TagString: Untagged
+  m_TagString: Bush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.02
   lifeSpan: 100
+  tree: 0
+  bush: 1
+  rock: 0
+  squiggle: 0
+  water: 0
