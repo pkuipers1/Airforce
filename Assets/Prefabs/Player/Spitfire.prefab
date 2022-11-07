@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visual: {fileID: 324872762202313862}
   movementSpeed: {x: 5, y: 7}
-  rotationSpeed: {x: 3, y: 5}
+  rotationSpeed: {x: 3, y: 1}
   currentRotation: {x: 0, y: 0, z: 0}
   rotationReturner: 0.88
   rotationThreshold: 60
