@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.02
   lifeSpan: 100
+  ageThreshold: 0.05
   tree: 1
   bush: 0
   rock: 0

@@ -14,7 +14,7 @@ public class EnvironmentSpawner : MonoBehaviour
     [SerializeField] float spawnAreaXMin;
     [SerializeField] float spawnAreaXMax;
     [SerializeField] float spawnAreaY;
-    public static float spawnCooldown;
+    [SerializeField] public static float spawnCooldown;
     private float currentSpawnCooldown;
     
     [Header("Random Rotation")]
@@ -62,6 +62,7 @@ public class EnvironmentSpawner : MonoBehaviour
         var objectMade = Instantiate(environmentParts[randomSpawnNR], new Vector2(randomSpawnPos, spawnAreaY), Quaternion.Euler(new Vector3(0, 0, rotation)));
 
         objectMade.transform.localScale = new Vector3(scale, scale, scale);
+        objectMade.transform.SetParent(transform);
         
         currentSpawnCooldown = spawnCooldown;
     }
