@@ -14,7 +14,7 @@ public class EnvironmentSpawner : MonoBehaviour
     [SerializeField] float spawnAreaXMin;
     [SerializeField] float spawnAreaXMax;
     [SerializeField] float spawnAreaY;
-    [SerializeField] public static float spawnCooldown;
+    public static float spawnCooldown;
     private float currentSpawnCooldown;
     
     [Header("Random Rotation")]
