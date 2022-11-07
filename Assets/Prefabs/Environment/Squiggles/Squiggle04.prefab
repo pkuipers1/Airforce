@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.02
-  lifeSpan: 100
+  lifeSpan: 50
   ageThreshold: 0
   tree: 0
   bush: 0

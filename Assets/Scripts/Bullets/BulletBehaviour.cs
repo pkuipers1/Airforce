@@ -8,6 +8,7 @@ public class BulletBehaviour : MonoBehaviour
     [Header("Bullet Stats")]
     [SerializeField] private float bulletLifespan;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] public float bulletDamage;
     private float bulletAge;
 
     [Header("Unity Events")] 

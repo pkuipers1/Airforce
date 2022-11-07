@@ -80,6 +80,7 @@ public class HealthData : MonoBehaviour
     {
         health = 0;
         isDead = true;
+        gameObject.AddTag("Dead");
         onDie?.Invoke();
         TriggerChangedEvent(HealthEventTypes.Die);
     }

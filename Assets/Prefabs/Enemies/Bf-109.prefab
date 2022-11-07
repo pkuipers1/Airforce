@@ -95,7 +95,9 @@ GameObject:
   - component: {fileID: 1971978669283724144}
   - component: {fileID: 1354396230411481083}
   - component: {fileID: 2673051144521545254}
-  - component: {fileID: -4620214558461471089}
+  - component: {fileID: 3256860742931031351}
+  - component: {fileID: -2310217735161778187}
+  - component: {fileID: 8671180357439955409}
   m_Layer: 0
   m_Name: Bf-109
   m_TagString: Untagged
@@ -193,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Enemy
---- !u!114 &-4620214558461471089
+--- !u!114 &3256860742931031351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +204,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 4108866532989637065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 665c672f2e2777c47b3254da291fff52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: []
+  health: 100
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2310217735161778187}
+        m_TargetAssemblyTypeName: EnemyDeath, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onResurrected:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
+--- !u!114 &-2310217735161778187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4108866532989637065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0628823ec4cab754aa7e608b2b4bad54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8671180357439955409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4108866532989637065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c59b2e5ab481644a2ccae65c60a8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
