@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletLifespan: 5
   bulletSpeed: 0.3
-  bulletDamage: 5
+  bulletDamage: 10
   onShoot:
     m_PersistentCalls:
       m_Calls: []

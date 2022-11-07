@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLocation: 4
-  moveSpeed: 1.5
+  moveSpeed: 0.3
 --- !u!114 &-4678835553723703240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0628823ec4cab754aa7e608b2b4bad54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnemies: []
+  currentDeadEnemies: []
 --- !u!114 &1561348593662070739
 MonoBehaviour:
   m_ObjectHideFlags: 0

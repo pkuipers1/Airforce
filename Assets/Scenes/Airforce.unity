@@ -44220,6 +44220,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Squiggle
+--- !u!1001 &1103758402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2015058110}
+    m_Modifications:
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190487825263, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_Name
+      value: PlaneSmoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.476
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
 --- !u!1 &1108488335
 GameObject:
   m_ObjectHideFlags: 0
@@ -49093,6 +49166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0628823ec4cab754aa7e608b2b4bad54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnemies: []
+  currentDeadEnemies: []
 --- !u!114 &1230474992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66678,29 +66753,131 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigurations:
-  - waveName: Begin Wave
+  - waveName: 1st
     startWaveTimer: 1
     creatures:
     - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
-      creatureAmount: 3
+      creatureAmount: 1
       spawnLocations:
       - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
+      creatureAmount: 1
+      spawnLocations:
       - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
+      creatureAmount: 1
+      spawnLocations:
       - {fileID: 1960784154}
       spawnInterval: 1
-  - waveName: 1st
+  - waveName: 2nd
     startWaveTimer: 3
     creatures:
     - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
-      creatureAmount: 2
+      creatureAmount: 1
       spawnLocations:
       - {fileID: 45862607}
-      - {fileID: 1960784154}
       spawnInterval: 1
     - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
       creatureAmount: 1
       spawnLocations:
       - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
+      spawnInterval: 1
+  - waveName: 3rd
+    startWaveTimer: 3
+    creatures:
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 6725103556500284538, guid: 6ffac967ca8250f46bebd26028e85d35, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
+      spawnInterval: 1
+  - waveName: 4th
+    startWaveTimer: 3
+    creatures:
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
+      spawnInterval: 1
+  - waveName: 5th
+    startWaveTimer: 3
+    creatures:
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
+      spawnInterval: 1
+  - waveName: 6th
+    startWaveTimer: 3
+    creatures:
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 5104186916104817964, guid: 8311c1273512736458fe58e769a56834, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
+      spawnInterval: 1
+  - waveName: 7th
+    startWaveTimer: 3
+    creatures:
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 45862607}
+      spawnInterval: 1
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1523370385}
+      spawnInterval: 1
+    - creature: {fileID: 8854212367157758960, guid: c5e3b66b351984743b3f8c384ec4bc27, type: 3}
+      creatureAmount: 1
+      spawnLocations:
+      - {fileID: 1960784154}
       spawnInterval: 1
   onStartWave:
     m_PersistentCalls:
@@ -81056,6 +81233,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Bush
+--- !u!1001 &1996365081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2015058110}
+    m_Modifications:
+    - target: {fileID: 3217823190487825263, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_Name
+      value: PlaneSmoke (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190488049487, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
 --- !u!1 &2000066839
 GameObject:
   m_ObjectHideFlags: 0
@@ -81627,6 +81861,11 @@ MonoBehaviour:
 --- !u!1 &2015058099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 324872762614426423, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+  m_PrefabInstance: {fileID: 556591479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2015058110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 324872762614426444, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
   m_PrefabInstance: {fileID: 556591479}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2015256277

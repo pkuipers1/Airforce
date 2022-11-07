@@ -10,13 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private float positionY;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    private void Update()
+    private void FixedUpdate()
     {
         positionY = transform.position.y;
         MoveToTargetLocation();
