@@ -34937,6 +34937,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: rotationSpeed.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: rotationSpeed.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: rotationThreshold
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 324872762614426423, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
       propertyPath: m_Name
       value: Spitfire
