@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3903161600054434326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3903161600054434313}
+  - component: {fileID: 3903161600054434312}
+  m_Layer: 0
+  m_Name: Rocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3903161600054434313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903161600054434326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3903161600054434312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903161600054434326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8f0aa53fa7d114ea0c18dda2613816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentParts:
+  - {fileID: 7856949046951301733, guid: 9bf8c3d90e73ee745aba89d51e9fb607, type: 3}
+  - {fileID: 4349879286437060233, guid: 441809717c05265449b113d3a22e9dc2, type: 3}
+  - {fileID: 708727815784277893, guid: 61f9a181533ef7b469a6d4b10142091a, type: 3}
+  - {fileID: 895677978489624163, guid: c0e32dc627434e442b591bb0c9119c49, type: 3}
+  - {fileID: 2269743729823867462, guid: 152ef15da0dd18f4884f705a3b90eca2, type: 3}
+  - {fileID: 2004446042949188917, guid: 506b21cde31520f4d8ba4859acc9d5a7, type: 3}
+  - {fileID: 1524401191037860938, guid: 588a924d46f708f48a07d9ac7da37067, type: 3}
+  - {fileID: 5811048608432195158, guid: ae47a56ef5ab1804e8adc4dd9bf06fcd, type: 3}
+  - {fileID: 5582353642667238648, guid: 792c0140eb8d2764384ced7dfc9586e8, type: 3}
+  - {fileID: 5263833052083837884, guid: 57c2754e1c061dd45a727cdb7897af68, type: 3}
+  - {fileID: 8264204927552377736, guid: 9798a4615540dd340a7bb841d3f11cbd, type: 3}
+  - {fileID: 3349634203602719317, guid: 15fa124a3037b844382304982aaf3500, type: 3}
+  spawnAreaXMin: -9
+  spawnAreaXMax: 9
+  spawnAreaY: 9
+  spawnCooldown: 0.08
+  randomRotation: 1
+  randomRotationMin: 0
+  randomRotationMax: 360
+  randomScale: 1
+  randomScaleMin: 0.2
+  randomScaleMax: 0.4
