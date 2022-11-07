@@ -43,35 +43,35 @@ public class EnvironmentBehaviour : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (CompareTag("Tree") && col.CompareTag("Tree") && tree)
+        if (gameObject.HasTag("Tree") && col.gameObject.HasTag("Tree") && tree)
         {
             if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
             {
                 Destroy(gameObject);
             }
         }
-        if (CompareTag("Bush") && col.CompareTag("Bush") && bush)
+        if (gameObject.HasTag("Bush") && col.gameObject.HasTag("Bush") && bush)
         {
             if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
             {
                 Destroy(gameObject);
             }        
         }
-        if (CompareTag("Rock") && col.CompareTag("Rock") && rock)
+        if (gameObject.HasTag("Rock") && col.gameObject.HasTag("Rock") && rock)
         {
             if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
             {
                 Destroy(gameObject);
             }        
         }
-        if (CompareTag("Squiggle") && col.CompareTag("Squiggle") && squiggle)
+        if (gameObject.HasTag("Squiggle") && col.gameObject.HasTag("Squiggle") && squiggle)
         {
             if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
             {
                 Destroy(gameObject);
             }        
         }
-        if (CompareTag("Water") && col.CompareTag("Water") && water)
+        if (gameObject.HasTag("Water") && col.gameObject.HasTag("Water") && water)
         {
             if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
             {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7117816772994795095}
   - component: {fileID: 774961657440909149}
   - component: {fileID: 2064210778}
+  - component: {fileID: -2544927709842553986}
   m_Layer: 0
   m_Name: water_env_1
   m_TagString: Untagged
@@ -97,3 +98,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.02
   lifeSpan: 100
+  ageThreshold: 0
+  tree: 0
+  bush: 0
+  rock: 0
+  squiggle: 0
+  water: 0
+--- !u!114 &-2544927709842553986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443009430070089880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - Water

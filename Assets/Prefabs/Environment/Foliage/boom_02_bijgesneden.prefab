@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: -1304960660597871846}
   - component: {fileID: 8358179399822063511}
   - component: {fileID: -9054630944058442241}
+  - component: {fileID: 3559141653917535643}
   m_Layer: 0
   m_Name: boom_02_bijgesneden
-  m_TagString: Bush
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,3 +143,17 @@ CircleCollider2D:
   m_Offset: {x: 0.014864922, y: 0}
   serializedVersion: 2
   m_Radius: 2.3844643
+--- !u!114 &3559141653917535643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470051289466491070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - Bush
