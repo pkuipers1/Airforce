@@ -27,7 +27,6 @@ public class EnvironmentSpawner : MonoBehaviour
     [SerializeField] float randomScaleMin;
     [SerializeField] float randomScaleMax;
     
-    // Update is called once per frame
     void Update()
     {
         currentSpawnCooldown -= Time.deltaTime;
