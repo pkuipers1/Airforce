@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class EnvironmentBehaviour : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private EnvironmentSpawner environmentSpawner;
+    
     [Header("Stats")]
     [SerializeField] float moveSpeed;
     [SerializeField] float lifeSpan;
     [SerializeField] private float ageThreshold;
 
-    [Header("Despawn when Touching:")] 
-    [SerializeField] bool tree;
-    [SerializeField] bool bush;
-    [SerializeField] bool rock;
-    [SerializeField] bool squiggle;
-    [SerializeField] bool water;
+    [Header("Booleans")]
+    [SerializeField] bool cannotHitTree;
+    [SerializeField] bool cannotHitBush;
+    [SerializeField] bool cannotHitRock;
+    [SerializeField] bool cannotHitSquiggle;
+    [SerializeField] bool cannotHitWater;
 
     private float age;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
         Despawn();
@@ -43,40 +45,21 @@ public class EnvironmentBehaviour : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (gameObject.HasTag("Tree") && col.gameObject.HasTag("Tree") && tree)
-        {
-            if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
-            {
-                Destroy(gameObject);
-            }
-        }
-        if (gameObject.HasTag("Bush") && col.gameObject.HasTag("Bush") && bush)
-        {
-            if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
-            {
-                Destroy(gameObject);
-            }        
-        }
-        if (gameObject.HasTag("Rock") && col.gameObject.HasTag("Rock") && rock)
-        {
-            if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
-            {
-                Destroy(gameObject);
-            }        
-        }
-        if (gameObject.HasTag("Squiggle") && col.gameObject.HasTag("Squiggle") && squiggle)
-        {
-            if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
-            {
-                Destroy(gameObject);
-            }        
-        }
-        if (gameObject.HasTag("Water") && col.gameObject.HasTag("Water") && water)
-        {
-            if (age <= EnvironmentSpawner.spawnCooldown + ageThreshold)
-            {
-                Destroy(gameObject);
-            }
-        }
+        DestroyOnCollisionWithOther(col);
+    }
+
+    private void DestroyOnCollisionWithOther(Collider2D col)
+    {
+        var collideWithOtherTree = gameObject.HasTag("Tree") && col.gameObject.HasTag("Tree") && cannotHitTree && age <= environmentSpawner.GetSpawnCooldown() + ageThreshold;
+        var collideWithOtherBush = gameObject.HasTag("Bush") && col.gameObject.HasTag("Bush") && cannotHitBush && age <= environmentSpawner.GetSpawnCooldown() + ageThreshold;
+        var collideWithOtherRock = gameObject.HasTag("Rock") && col.gameObject.HasTag("Rock") && cannotHitRock && age <= environmentSpawner.GetSpawnCooldown() + ageThreshold;
+        var collideWithOtherSquiggle = gameObject.HasTag("Squiggle") && col.gameObject.HasTag("Squiggle") && cannotHitSquiggle && age <= environmentSpawner.GetSpawnCooldown() + ageThreshold;
+        var collideWithOtherWater = gameObject.HasTag("Water") && col.gameObject.HasTag("Water") && cannotHitWater && age <= environmentSpawner.GetSpawnCooldown() + ageThreshold;
+
+        if(collideWithOtherTree) Destroy(gameObject);
+        if(collideWithOtherBush) Destroy(gameObject);
+        if(collideWithOtherRock) Destroy(gameObject);
+        if(collideWithOtherSquiggle) Destroy(gameObject);
+        if(collideWithOtherWater) Destroy(gameObject);
     }
 }

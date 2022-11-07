@@ -14,7 +14,7 @@ public class EnvironmentSpawner : MonoBehaviour
     [SerializeField] float spawnAreaXMin;
     [SerializeField] float spawnAreaXMax;
     [SerializeField] float spawnAreaY;
-    public static float spawnCooldown;
+    [SerializeField] float spawnCooldown;
     private float currentSpawnCooldown;
     
     [Header("Random Rotation")]
@@ -41,28 +41,22 @@ public class EnvironmentSpawner : MonoBehaviour
         var rotation = 0f;
         var scale = 1f;
         
-        float randomSpawnPos = Random.Range(spawnAreaXMin, spawnAreaXMax);
-        float randomRot = Random.Range(randomRotationMin, randomRotationMax);
-        float randomScaleFactor = Random.Range(randomScaleMin, randomScaleMax);
+        var randomSpawnPos = Random.Range(spawnAreaXMin, spawnAreaXMax);
+        var randomRot = Random.Range(randomRotationMin, randomRotationMax);
+        var randomScaleFactor = Random.Range(randomScaleMin, randomScaleMax);
         
-        int randomSpawnNR = Random.Range(0, environmentParts.Length);
+        var randomSpawnNR = Random.Range(0, environmentParts.Length);
         
-        if (randomRotation)
-        {
-            rotation = randomRot;
-        }
+        if (randomRotation) rotation = randomRot;
+        if (randomScale) scale = randomScaleFactor;
 
-        if (randomScale)
-        {
-            scale = randomScaleFactor;
-        }
-        
-        
         var objectMade = Instantiate(environmentParts[randomSpawnNR], new Vector2(randomSpawnPos, spawnAreaY), Quaternion.Euler(new Vector3(0, 0, rotation)));
 
-        objectMade.transform.localScale = new Vector3(scale, scale, scale);
+        objectMade.transform.localScale = new Vector3(scale, scale, 1);
         objectMade.transform.SetParent(transform);
         
         currentSpawnCooldown = spawnCooldown;
     }
+
+    public float GetSpawnCooldown() => spawnCooldown;
 }
