@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1038015761679368610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038015761679368611}
+  - component: {fileID: 1038015761679368608}
+  m_Layer: 0
+  m_Name: Squiggles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1038015761679368611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038015761679368610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038015761679368608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038015761679368610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8f0aa53fa7d114ea0c18dda2613816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentParts:
+  - {fileID: 499408771374819950, guid: fda607d74df88ca47afd8b8f05ce4bf3, type: 3}
+  - {fileID: 557659793115069750, guid: 7702d0740e2f3374990aed03eab83895, type: 3}
+  - {fileID: 8139906561518419795, guid: 4ccee8b71e75083458312191fb422d04, type: 3}
+  - {fileID: 3954048547290276081, guid: 5c7f2b1a9a8fdd84c9297778f94becd0, type: 3}
+  - {fileID: 1584469551764551308, guid: f38290849ac52b04f80a8798d78a3a60, type: 3}
+  - {fileID: 6654229791603555301, guid: af57e6dcb2310974daebbf04e88d22dc, type: 3}
+  - {fileID: 2565570225056943199, guid: 3585b34d2c9310d4e9add91cb4396cf1, type: 3}
+  - {fileID: 1970498858849404112, guid: ea35afb0d3006fd44bd7a7e2177ffea6, type: 3}
+  - {fileID: 3449810533458895464, guid: 481568f6b0f30c34aab6ff88ffe20147, type: 3}
+  - {fileID: 1896213063162110793, guid: 93751a638386039499397288be861274, type: 3}
+  - {fileID: 1829762415284372102, guid: c51469dc85ab1704ebd8771cc55daaca, type: 3}
+  - {fileID: 9032136177923867482, guid: 5da6dcef9937e8b42be58e768e455b2e, type: 3}
+  - {fileID: 7877184983456921420, guid: 64f1207f380276e41b65b34954070aad, type: 3}
+  - {fileID: 3264239496071920938, guid: 749acd0eac72aff48984f7723d5c162b, type: 3}
+  - {fileID: 8491447535255615972, guid: ac0ca8366990c1b48846e6950812e8a6, type: 3}
+  spawnAreaXMin: -9
+  spawnAreaXMax: 9
+  spawnAreaY: 9
+  spawnCooldown: 0.08
+  randomRotation: 1
+  randomRotationMin: 0
+  randomRotationMax: 360
+  randomScale: 1
+  randomScaleMin: 0.2
+  randomScaleMax: 0.4
