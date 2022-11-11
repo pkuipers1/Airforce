@@ -1,16 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class EnemyShooting : PlayerShooting
 {
+    private bool canShoot;
+    
     private void Update()
     {
-        shootCooldown -= Time.deltaTime;
-
-        //var shootingInterval = Random.Range(0, 1);
+        var a = shootCooldown * 3;
+        a -= Time.deltaTime;
+        if (a > 0) canShoot = true;
+        else canShoot = false;
         
-        Shoot();
+        shootCooldown -= Time.deltaTime;
+        if(canShoot) Shoot();
     }
 }
