@@ -23,7 +23,6 @@ public class HitScript : MonoBehaviour
     {
         var bulletBehaviour = col.GetComponent<BulletBehaviour>();
         healthData.TakeDamage(bulletBehaviour.bulletDamage);       
-        Debug.Log("Enemy hit functie");
         Destroy(col.gameObject);
     }
     private void PlayerIsHit(Collider2D col)
