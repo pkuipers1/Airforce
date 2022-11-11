@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletLifespan: 5
-  bulletSpeed: 0.3
+  bulletSpeed: 0.2
   bulletDamage: 10
   onShoot:
     m_PersistentCalls:

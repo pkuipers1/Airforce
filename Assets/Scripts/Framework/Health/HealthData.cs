@@ -7,7 +7,10 @@ public class HealthData : MonoBehaviour
 {
     [SerializeField] private float health = 100f;
     private float _maxHealth;
-    
+
+    [SerializeField] private ParticleSystem health20FX;
+    [SerializeField] private ParticleSystem health10FX;
+
     public UnityEvent<HealthEvent> onHealthChanged = new UnityEvent<HealthEvent>();
     [SerializeField] private UnityEvent onHealthAdded = new UnityEvent();
     [SerializeField] private UnityEvent onDamageTaken = new UnityEvent();
@@ -24,6 +27,11 @@ public class HealthData : MonoBehaviour
     private void Start()
     {
         InitHealth();
+    }
+
+    private void Update()
+    {
+        CheckHealthPercentage();
     }
 
     private void InitHealth()
@@ -93,5 +101,17 @@ public class HealthData : MonoBehaviour
     public void DestroySelf()
     {
         Destroy(gameObject);
+    }
+    
+    private void CheckHealthPercentage()
+    {
+        if (health < (0.3f * MaxHealth))
+        {
+            health20FX.Play();
+        }
+        if (health < (0.2f * MaxHealth))
+        {
+            health10FX.Play();
+        }
     }
 }
