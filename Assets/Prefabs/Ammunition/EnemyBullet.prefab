@@ -47,12 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84789151bc66a44781d4e0d13b4f4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletLifespan: 100
-  bulletSpeed: 0
+  bulletLifespan: 5
+  bulletSpeed: -0.3
+  bulletDamage: 10
   onShoot:
     m_PersistentCalls:
       m_Calls: []
-  onHit:
+  onHitTarget:
     m_PersistentCalls:
       m_Calls: []
   onDeath:
@@ -68,7 +69,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -193,7 +194,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: b86d9688353de6343b8dfbc71ae3d86f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5

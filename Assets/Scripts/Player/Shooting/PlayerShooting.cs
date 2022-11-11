@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -14,8 +15,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        shootCooldown -= Time.deltaTime;
-    }
+        shootCooldown -= Time.deltaTime; }
 
     public void Shoot(float shootInput)
     {
@@ -25,7 +25,7 @@ public class PlayerShooting : MonoBehaviour
         {
             foreach (var spawnpoint in bulletSpawnpoints)
             {
-                Instantiate(bullet, spawnpoint.transform.position, Quaternion.identity);
+                Instantiate(bullet, spawnpoint.transform.position, quaternion.identity);
             }
             shootCooldown = reloadSpeed;
         }

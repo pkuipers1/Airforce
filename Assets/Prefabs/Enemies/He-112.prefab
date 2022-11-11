@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7103105753738030357}
   - component: {fileID: 8938316210592574788}
   - component: {fileID: -8260637049419501217}
+  - component: {fileID: -7521215991567955897}
   m_Layer: 0
   m_Name: He-112
   m_TagString: Untagged
@@ -262,3 +263,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c59b2e5ab481644a2ccae65c60a8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7521215991567955897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854212367157758960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499ad0242fa722741a880bc95c3ca3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reloadSpeed: 1
+  bulletSpawnpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  bullet: {fileID: 5042031565836665631, guid: f8dec78f0b4b7044892ac26ceccfa5d6, type: 3}

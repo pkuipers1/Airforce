@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.PlayerLoop;
 
 public class BulletBehaviour : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] private UnityEvent onShoot = new UnityEvent();
     [SerializeField] public UnityEvent onHitTarget = new UnityEvent();
     [SerializeField] private UnityEvent onDeath = new UnityEvent();
-    
+
     void Start()
     {
         bulletAge = 0;
