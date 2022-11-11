@@ -8517,14 +8517,126 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4068065352824563225, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: effects.Array.data[0]
-      value: 
-      objectReference: {fileID: 1264500160}
-    - target: {fileID: 4068065352824563225, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: effects.Array.data[1]
-      value: 
-      objectReference: {fileID: 854882354}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273729597051981862, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337535305631874165, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
 --- !u!1 &565343165
@@ -11636,11 +11748,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!198 &854882354 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4093122363714817399, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-  m_PrefabInstance: {fileID: 556591479}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &857178288
 GameObject:
   m_ObjectHideFlags: 0
@@ -17121,11 +17228,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!198 &1264500160 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5433529333451644798, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-  m_PrefabInstance: {fileID: 556591479}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1267021009
 GameObject:
   m_ObjectHideFlags: 0
