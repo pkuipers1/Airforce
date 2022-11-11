@@ -7,6 +7,12 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private float speedDivider;
+    private Transform playerPos;
+
+    private void Awake()
+    {
+        playerPos = player.transform;
+    }
 
     private void FixedUpdate()
     {
@@ -15,8 +21,7 @@ public class CameraMovement : MonoBehaviour
 
     private void MoveCamera()
     {
-        var playerPos = player.transform.position;
-        var wantedPosition = new Vector3(playerPos.x / speedDivider, playerPos.y / speedDivider, -10);
+        var wantedPosition = new Vector3(playerPos.position.x / speedDivider, playerPos.position.y / speedDivider, -10);
         transform.position = wantedPosition;
     }
 }
