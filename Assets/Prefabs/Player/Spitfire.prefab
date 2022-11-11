@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391f03966c6ffc941ae15525746fad7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootCooldown: 1
   reloadSpeed: 0.3
   bulletSpawnpoints:
   - {fileID: 4497445351920773413}

@@ -1526,7 +1526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1687540494146940579, guid: 7b72a23a5feb12244bfb3c3033112071, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b72a23a5feb12244bfb3c3033112071, type: 3}
@@ -8469,25 +8469,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: rotationSpeed.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: rotationSpeed.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 324872762614426417, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: rotationThreshold
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 324872762614426423, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
       propertyPath: m_Name
       value: Spitfire
-      objectReference: {fileID: 0}
-    - target: {fileID: 324872762614426423, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 324872762614426444, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
       propertyPath: m_RootOrder
