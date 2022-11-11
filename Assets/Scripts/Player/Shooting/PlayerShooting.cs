@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeField] private float shootCooldown;
+    private float shootCooldown;
     [SerializeField] private float reloadSpeed;
 
     [SerializeField] private List<GameObject> bulletSpawnpoints;

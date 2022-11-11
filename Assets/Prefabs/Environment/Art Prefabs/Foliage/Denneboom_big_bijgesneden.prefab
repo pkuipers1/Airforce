@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 820135465257479840}
   - component: {fileID: 1945673112942722149}
   - component: {fileID: -7396739811062601270}
+  - component: {fileID: 1622176676650010058}
   - component: {fileID: 6456344269764537783}
   - component: {fileID: 7953774237329020068}
-  - component: {fileID: 1622176676650010058}
   m_Layer: 0
   m_Name: Denneboom_big_bijgesneden
   m_TagString: Tree
@@ -107,6 +107,20 @@ MonoBehaviour:
   cannotHitRock: 0
   cannotHitSquiggle: 0
   cannotHitWater: 0
+--- !u!114 &1622176676650010058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547742009934171386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - Tree
 --- !u!58 &6456344269764537783
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -144,17 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1622176676650010058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4547742009934171386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags:
-  - Tree
