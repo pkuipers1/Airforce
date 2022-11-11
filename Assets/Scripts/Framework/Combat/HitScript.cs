@@ -27,6 +27,9 @@ public class HitScript : MonoBehaviour
     }
     private void PlayerIsHit(Collider2D col)
     {
+        var bulletBehaviour = col.GetComponent<BulletBehaviour>();
+        healthData.TakeDamage(bulletBehaviour.bulletDamage);       
+        Debug.Log("Kiekeboe");
         Destroy(col.gameObject);
     }
 }
