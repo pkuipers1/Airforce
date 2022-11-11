@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    private float shootCooldown;
+    protected float shootCooldown;
     [SerializeField] private float reloadSpeed;
 
     [SerializeField] private List<GameObject> bulletSpawnpoints;
@@ -15,9 +15,10 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        shootCooldown -= Time.deltaTime; }
+        shootCooldown -= Time.deltaTime; 
+    }
 
-    public void Shoot(float shootInput)
+    public void Shoot(float shootInput = 1)
     {
         if (shootInput == 0) return;
 

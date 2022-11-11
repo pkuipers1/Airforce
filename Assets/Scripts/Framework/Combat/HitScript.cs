@@ -29,7 +29,6 @@ public class HitScript : MonoBehaviour
     {
         var bulletBehaviour = col.GetComponent<BulletBehaviour>();
         healthData.TakeDamage(bulletBehaviour.bulletDamage);       
-        Debug.Log("Kiekeboe");
         Destroy(col.gameObject);
     }
 }

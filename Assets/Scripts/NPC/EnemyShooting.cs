@@ -7,6 +7,10 @@ public class EnemyShooting : PlayerShooting
 {
     private void Update()
     {
-        Shoot(1);
+        shootCooldown -= Time.deltaTime;
+
+        //var shootingInterval = Random.Range(0, 1);
+        
+        Shoot();
     }
 }
