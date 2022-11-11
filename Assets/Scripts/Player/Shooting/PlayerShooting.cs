@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerShooting : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onShoot = new UnityEvent();
+
     protected float shootCooldown;
     [SerializeField] private float reloadSpeed;
 
@@ -26,6 +29,7 @@ public class PlayerShooting : MonoBehaviour
         {
             foreach (var spawnpoint in bulletSpawnpoints)
             {
+                onShoot?.Invoke();
                 Instantiate(bullet, spawnpoint.transform.position, quaternion.identity);
             }
             shootCooldown = reloadSpeed;
