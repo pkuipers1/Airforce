@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HitScript : MonoBehaviour
 {
     private HealthData healthData;
+    [SerializeField] private ParticleSystem impactEffect;
 
     private void Awake()
     {
@@ -22,13 +24,15 @@ public class HitScript : MonoBehaviour
     private void EnemyIsHit(Collider2D col)
     {
         var bulletBehaviour = col.GetComponent<BulletBehaviour>();
-        healthData.TakeDamage(bulletBehaviour.bulletDamage);       
+        healthData.TakeDamage(bulletBehaviour.bulletDamage);
+        Instantiate(impactEffect, col.transform.position, Quaternion.identity);
         Destroy(col.gameObject);
     }
     private void PlayerIsHit(Collider2D col)
     {
         var bulletBehaviour = col.GetComponent<BulletBehaviour>();
-        healthData.TakeDamage(bulletBehaviour.bulletDamage);       
+        healthData.TakeDamage(bulletBehaviour.bulletDamage);
+        Instantiate(impactEffect, col.transform.position, Quaternion.identity);
         Destroy(col.gameObject);
     }
 }

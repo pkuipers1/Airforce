@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c59b2e5ab481644a2ccae65c60a8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactEffect: {fileID: 2930750779026820269, guid: 009c7c7ce49356448a294253bbac55ce, type: 3}
 --- !u!61 &8522428438876290091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -488,6 +489,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 324872762614426444}
     m_Modifications:
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3217823190487825263, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
       propertyPath: m_Name
       value: PlaneSmoke
@@ -550,6 +599,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 324872762614426444}
     m_Modifications:
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217823190472843791, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3217823190487825263, guid: 19d9fcb60fc5b4645b4e05fb4894707a, type: 3}
       propertyPath: m_Name
       value: PlaneSmoke (1)
