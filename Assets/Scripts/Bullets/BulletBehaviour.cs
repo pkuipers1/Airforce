@@ -31,10 +31,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         bulletAge += Time.deltaTime;
         
-        if (bulletAge > bulletLifespan)
-        {
-            Destroy(gameObject);
-        }
+        if (bulletAge > bulletLifespan) Destroy(gameObject);
     }
 
     private void Move()
