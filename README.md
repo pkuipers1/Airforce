@@ -3,17 +3,29 @@ Een single-player 2D shooter game.
 
 In deze repository vind je informatie over de game Airforce.
 
-De opdracht is om een game te maken met de docent als opdrachtgever, je mag het onderwerp van de game zelf bepalen. De focus is vooral op goede presentatie, planning en professioneel werken. Het idee van de game is dat je met een vliegtuig door de lucht kan vliegen en tegenstanders neer kan schieten, waardoor je items kunt krijgen om je vliegtuig sterker te maken voor volgende rondes. Ook kun je munten verzamelen om sterkere vliegtuigen vrij te spelen. Het doel van het spel is om ze allemaal te verzamelen.
+Geïnspireerd geraakt door arcade-games uit de jaren 80, maar ook een moderne draai willen geven, heeft geleid tot de start van dit project. Met deze klassieke shooter kun je een vliegtuig besturen die vijandelijke vliegtuigen moet bevechten.
+
+Het doel van dit project was om het technisch goed aan te pakken en te documenteren. Waar ook een focus op lag is vooral op planning en professioneel werken. Deze game is ook in opdracht van een opdrachtgever.
+
+# Prototype
+https://github.com/pkuipers1/Airforce-Prototype
 
 # Geproduceerde Game Onderdelen
 
 Patricia Kuipers (me):
 - Art (Planes, Clouds, Particle FX)
-- Movement (Partially)
+- Player Movement (Prototype)
 - Shooting
+- Enviorment Spawner
+- Enemy Spawning
+- Enemy AI
 
 Bas de Reus (https://github.com/bas-boop):
-- Movement (Partially)
+- Code reviews
+- Git master
+- Scrum master
+- Player Movement & Rotation (Final)
+- Camera Flow
 - Health
 
 To be continued...
