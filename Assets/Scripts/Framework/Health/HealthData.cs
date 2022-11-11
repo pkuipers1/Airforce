@@ -102,6 +102,8 @@ public class HealthData : MonoBehaviour
     
     private void CheckHealthPercentage()
     {
+        if (damageEffects.Count == 0) return;
+        
         var healthPercentage = MaxHealth / 100 * health;
         
         switch (healthPercentage)
