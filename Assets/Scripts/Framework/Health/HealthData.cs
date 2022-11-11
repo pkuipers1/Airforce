@@ -1,15 +1,16 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class HealthData : MonoBehaviour
 {
     [SerializeField] private float health = 100f;
     private float _maxHealth;
 
-    [SerializeField] private ParticleSystem health20FX;
-    [SerializeField] private ParticleSystem health10FX;
+    [SerializeField] private List<ParticleSystem> damageEffects;
 
     public UnityEvent<HealthEvent> onHealthChanged = new UnityEvent<HealthEvent>();
     [SerializeField] private UnityEvent onHealthAdded = new UnityEvent();
@@ -28,12 +29,7 @@ public class HealthData : MonoBehaviour
     {
         InitHealth();
     }
-
-    private void Update()
-    {
-        CheckHealthPercentage();
-    }
-
+    
     private void InitHealth()
     {
         _maxHealth = health;
@@ -78,6 +74,7 @@ public class HealthData : MonoBehaviour
         _isHit = true;
         health -= damage;
         onDamageTaken?.Invoke();
+        CheckHealthPercentage();
         TriggerChangedEvent(HealthEventTypes.TakeDamage, damage);
         _isHit = false;
         
@@ -105,13 +102,49 @@ public class HealthData : MonoBehaviour
     
     private void CheckHealthPercentage()
     {
-        if (health < (0.3f * MaxHealth))
+        var healthPercentage = MaxHealth / 100 * health;
+        
+        switch (healthPercentage)
         {
-            health20FX.Play();
+            case 50:
+            {
+                AssignDamageEffect();
+                break;
+            }
+            case 40:
+            {
+                AssignDamageEffect();
+                break;
+            }
+            case 30:
+            {
+                AssignDamageEffect();
+                break;
+            }
+            case 20:
+            {
+                AssignDamageEffect();
+                break;
+            }
+            case 10:
+            {
+                AssignDamageEffect();
+                break;
+            }
         }
-        if (health < (0.2f * MaxHealth))
+    }
+
+    private void AssignDamageEffect()
+    {
+        int randomEffect = Random.Range(0, damageEffects.Count);
+
+        if (damageEffects[randomEffect].isPlaying)
         {
-            health10FX.Play();
+            AssignDamageEffect();
+        }
+        else
+        {
+            damageEffects[randomEffect].Play();
         }
     }
 }

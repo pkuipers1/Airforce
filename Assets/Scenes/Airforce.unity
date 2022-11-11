@@ -8517,6 +8517,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 324872762614426446, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: damageEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 324872762614426446, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: damageEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1650461867}
+    - target: {fileID: 324872762614426446, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: damageEffects.Array.data[1]
+      value: 
+      objectReference: {fileID: 903586581}
     - target: {fileID: 4810506652602718773, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -12229,6 +12241,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &903586581 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4810506652627908277, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+  m_PrefabInstance: {fileID: 556591479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &910431699
 GameObject:
   m_ObjectHideFlags: 0
@@ -22783,6 +22800,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &1650461867 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7278624244120742621, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+  m_PrefabInstance: {fileID: 556591479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1652199607
 GameObject:
   m_ObjectHideFlags: 0
