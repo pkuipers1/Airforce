@@ -37,7 +37,6 @@ public class WaveSystem : MonoBehaviour
     private void SpawnCreatures(int wave)
     {
         var currentWave = waveConfigurations[wave];
-        print("Starting: " + currentWave.waveName + "...");
 
         foreach (var creature in currentWave.creatures)
         {

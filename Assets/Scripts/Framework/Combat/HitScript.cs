@@ -7,7 +7,7 @@ public class HitScript : MonoBehaviour
 {
     private HealthData healthData;
 
-    private void Start()
+    private void Awake()
     {
         healthData = gameObject.GetComponent<HealthData>();
     }
