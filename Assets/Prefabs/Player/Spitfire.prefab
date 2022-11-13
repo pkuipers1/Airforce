@@ -101,6 +101,8 @@ GameObject:
   - component: {fileID: 8522428438876290091}
   - component: {fileID: 8209162737800507583}
   - component: {fileID: 4068065352824563225}
+  - component: {fileID: 2015058112}
+  - component: {fileID: 2015058100}
   m_Layer: 0
   m_Name: Spitfire
   m_TagString: Untagged
@@ -256,6 +258,7 @@ MonoBehaviour:
   - {fileID: 7645955735971981451}
   - {fileID: 3457383585620551836}
   - {fileID: 8417278531573870261}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -264,7 +267,19 @@ MonoBehaviour:
       m_Calls: []
   onDamageTaken:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2015058100}
+        m_TargetAssemblyTypeName: PlaySounds, Assembly-CSharp
+        m_MethodName: PlayHitSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -369,6 +384,14 @@ MonoBehaviour:
   - {fileID: 4497445351920773413}
   - {fileID: 633212630880605145}
   bullet: {fileID: 847951327749226659, guid: 2986822b9c6307348acc0899898a2ec2, type: 3}
+  machineGunSounds:
+  - {fileID: 8300000, guid: 68d0d688bb1331e47bbba00b9c03fd72, type: 3}
+  - {fileID: 8300000, guid: 655d35866bf88cf429223009cce35aa0, type: 3}
+  - {fileID: 8300000, guid: 65ff0a54b75cc5648ba62099469df506, type: 3}
+  - {fileID: 8300000, guid: 2d14e6aa3bb3d29438071ffe9bd015f5, type: 3}
+  - {fileID: 8300000, guid: a0ca582a833e2674eaa9d26c52736f2e, type: 3}
+  spitfireAudio: {fileID: 2015058112}
+  soundDelay: 0
 --- !u!114 &4068065352824563225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +407,116 @@ MonoBehaviour:
   effects:
   - {fileID: 5433529333451644798}
   - {fileID: 4093122363714817399}
+--- !u!82 &2015058112
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324872762614426423}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 40a83c5166f2faf4ca5958bd7ccdc352, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 225
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.95
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2015058100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324872762614426423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f6fc742eef2554d8571d4ce4617ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []
+  hitSound: {fileID: 8300000, guid: 15034c1466b358747a7509a0543abbac, type: 3}
 --- !u!1 &633212630880605145
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +586,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (1)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -651,7 +784,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (2)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -763,14 +896,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
---- !u!198 &6352672546836413892 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4810506652056800699, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
-  m_PrefabInstance: {fileID: 1939749987431788671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6352672546854762628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
+  m_PrefabInstance: {fileID: 1939749987431788671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6352672546836413892 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4810506652056800699, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
   m_PrefabInstance: {fileID: 1939749987431788671}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2943593199367071024
@@ -782,7 +915,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (5)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -1023,7 +1156,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (7)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -1198,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325867551599118589, guid: 0512a1d5079e90843996f1617182c07c, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke)
+      value: DMGFire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0512a1d5079e90843996f1617182c07c, type: 3}
@@ -1221,7 +1354,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (3)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -1474,7 +1607,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (6)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -1605,7 +1738,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4810506652036912347, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_Name
-      value: WFX_Fire Natural (Gray Smoke) (4)
+      value: DMGFire
       objectReference: {fileID: 0}
     - target: {fileID: 4810506652037400827, guid: 96a6039aa1b65bd48927d2ccfba91a75, type: 3}
       propertyPath: m_RootOrder
@@ -1784,13 +1917,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: defbb8c12fdd9584e912298ca87342d0, type: 3}
---- !u!4 &5433529333436439100 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3905295076347721266, guid: defbb8c12fdd9584e912298ca87342d0, type: 3}
-  m_PrefabInstance: {fileID: 9031303892397026318}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &5433529333451644798 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 3905295076366070640, guid: defbb8c12fdd9584e912298ca87342d0, type: 3}
+  m_PrefabInstance: {fileID: 9031303892397026318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5433529333436439100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3905295076347721266, guid: defbb8c12fdd9584e912298ca87342d0, type: 3}
   m_PrefabInstance: {fileID: 9031303892397026318}
   m_PrefabAsset: {fileID: 0}

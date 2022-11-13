@@ -180,6 +180,7 @@ MonoBehaviour:
   - {fileID: 5810930761437595508}
   - {fileID: 6600965026981226761}
   - {fileID: 4709601971230599072}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -266,6 +267,9 @@ MonoBehaviour:
   bulletSpawnpoints:
   - {fileID: 185485707521353844}
   bullet: {fileID: 5042031565836665631, guid: f8dec78f0b4b7044892ac26ceccfa5d6, type: 3}
+  machineGunSounds: []
+  spitfireAudio: {fileID: 0}
+  soundDelay: 0
 --- !u!114 &-3825539153563402459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 2822170664659533033}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
 --- !u!1 &5867475720254882181
 GameObject:
   m_ObjectHideFlags: 0

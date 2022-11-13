@@ -11,6 +11,7 @@ public class HealthData : MonoBehaviour
     private float _maxHealth;
 
     [SerializeField] private List<ParticleSystem> damageEffects;
+    [SerializeField] private ParticleSystem deathEffect;
 
     public UnityEvent<HealthEvent> onHealthChanged = new UnityEvent<HealthEvent>();
     [SerializeField] private UnityEvent onHealthAdded = new UnityEvent();
@@ -131,6 +132,11 @@ public class HealthData : MonoBehaviour
             case 10:
             {
                 AssignDamageEffect();
+                break;
+            }
+            case 0:
+            {
+                Instantiate(deathEffect, transform.position, Quaternion.identity);
                 break;
             }
         }

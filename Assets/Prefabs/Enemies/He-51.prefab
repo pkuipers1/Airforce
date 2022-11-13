@@ -153,7 +153,6 @@ GameObject:
   - component: {fileID: 5645189476054347270}
   - component: {fileID: 4086547181295685852}
   - component: {fileID: -6633083227331650291}
-  - component: {fileID: 591554032029169929}
   - component: {fileID: 4558322461461204979}
   - component: {fileID: -4207771472025628976}
   - component: {fileID: -6318845845598249397}
@@ -225,19 +224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Enemy
---- !u!114 &591554032029169929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6725103556500284538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950c66db4c06edf4bb7623cefb6128d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags: []
 --- !u!50 &4558322461461204979
 Rigidbody2D:
   serializedVersion: 4
@@ -307,6 +293,7 @@ MonoBehaviour:
   - {fileID: 7101333069026510576}
   - {fileID: 4051388312298179081}
   - {fileID: 8539947640120009877}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -322,6 +309,18 @@ MonoBehaviour:
       - m_Target: {fileID: -5281243742945982891}
         m_TargetAssemblyTypeName: EnemyDeath, Assembly-CSharp
         m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3672621159631499625}
+        m_TargetAssemblyTypeName: PlayEffects, Assembly-CSharp
+        m_MethodName: PlayDeathEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -394,6 +393,9 @@ MonoBehaviour:
   - {fileID: 6425361601988752923}
   - {fileID: 3442803771000986107}
   bullet: {fileID: 5042031565836665631, guid: f8dec78f0b4b7044892ac26ceccfa5d6, type: 3}
+  machineGunSounds: []
+  spitfireAudio: {fileID: 0}
+  soundDelay: 0
 --- !u!114 &3672621159631499625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +411,7 @@ MonoBehaviour:
   effects:
   - {fileID: 197750187802252973}
   - {fileID: 5229901578078956388}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
 --- !u!1001 &2668065720654928625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,14 +560,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29d0a09187183b342bb8864d52b8251e, type: 3}
---- !u!4 &8539947640104804821 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5854409534703545125, guid: 29d0a09187183b342bb8864d52b8251e, type: 3}
-  m_PrefabInstance: {fileID: 2863435411794676464}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8539947640120009877 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5854409534684147301, guid: 29d0a09187183b342bb8864d52b8251e, type: 3}
+  m_PrefabInstance: {fileID: 2863435411794676464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8539947640104804821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5854409534703545125, guid: 29d0a09187183b342bb8864d52b8251e, type: 3}
   m_PrefabInstance: {fileID: 2863435411794676464}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3725051633345587349

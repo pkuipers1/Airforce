@@ -261,6 +261,7 @@ MonoBehaviour:
   - {fileID: 2613826746358624845}
   - {fileID: 7868625655303463197}
   - {fileID: 5541701564650116991}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -347,6 +348,9 @@ MonoBehaviour:
   bulletSpawnpoints:
   - {fileID: 2998874442668423980}
   bullet: {fileID: 5042031565836665631, guid: f8dec78f0b4b7044892ac26ceccfa5d6, type: 3}
+  machineGunSounds: []
+  spitfireAudio: {fileID: 0}
+  soundDelay: 0
 --- !u!114 &-8701202702642243148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 3138732620344614871}
+  deathEffect: {fileID: 5466647379668168658, guid: f2c9149a900bb834bb66452db2d01471, type: 3}
 --- !u!1001 &335447179470569940
 PrefabInstance:
   m_ObjectHideFlags: 0
