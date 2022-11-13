@@ -8517,6 +8517,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2821344770832886210, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457383585600926204, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632162640825632781, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810506652612931541, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352672546854331556, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278624244138996669, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645955735986631147, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417278531554572245, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
+      propertyPath: m_Name
+      value: DMGFire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57055047bc1fd6f4486b857d5c06d577, type: 3}
 --- !u!1 &565343165
