@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayEffects : MonoBehaviour
 {
     public List<ParticleSystem> effects;
+    public ParticleSystem deathEffect;
 
     public void PlayAll()
     {
@@ -12,5 +13,10 @@ public class PlayEffects : MonoBehaviour
         {
             effect.Play();
         }
+    }
+
+    public void PlayDeathEffect(Vector3 deathLocation)
+    {
+        Instantiate(deathEffect, deathLocation, Quaternion.identity);
     }
 }

@@ -9,6 +9,7 @@ public class HealthData : MonoBehaviour
 {
     [SerializeField] private float health = 100f;
     private float _maxHealth;
+    private PlayEffects playEffects;
 
     [SerializeField] private List<ParticleSystem> damageEffects;
     [SerializeField] private ParticleSystem deathEffect;
@@ -25,6 +26,11 @@ public class HealthData : MonoBehaviour
     
     private bool _isHit;
     [HideInInspector] public bool isDead;
+
+    private void Awake()
+    {
+        playEffects = gameObject.GetComponent<PlayEffects>();
+    }
 
     private void Start()
     {
@@ -84,10 +90,12 @@ public class HealthData : MonoBehaviour
 
     private void Die()
     {
+        var deathLocation = gameObject.transform.position;
         health = 0;
         isDead = true;
         gameObject.AddTag("Dead");
         onDie?.Invoke();
+        playEffects.PlayDeathEffect(deathLocation);
         TriggerChangedEvent(HealthEventTypes.Die);
     }
 
